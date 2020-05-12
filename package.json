@@ -1,0 +1,21 @@
+{
+  "name": "dummy-ww",
+  "version": "1.0.0",
+  "description": "Nothing to see here",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib/**/*"],
+  "scripts": {
+    "build" : "tsc",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "maksim.nesterenko",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
