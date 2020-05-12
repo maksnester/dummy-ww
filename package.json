@@ -1,13 +1,15 @@
 {
-  "name": "dummy-ww",
-  "version": "0.0.1",
+  "name": "dummy-worker",
+  "version": "0.0.2",
   "description": "Nothing to see here",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
-    "build" : "tsc",
-    "version": "npm run format && git add -A src",
+    "build": "webpack",
+    "version": "git add -A src",
     "postversion": "git push && git push --tags",
     "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +18,11 @@
   "author": "maksim.nesterenko",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "ts-loader": "^7.0.4"
   }
 }
