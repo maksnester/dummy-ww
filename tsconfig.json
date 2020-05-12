@@ -5,6 +5,7 @@
     "declaration": true,
     "noImplicitAny": true,
     "outDir": "./lib",
+    "allowJs": true,
     "strict": true
   },
   "include": ["src"],

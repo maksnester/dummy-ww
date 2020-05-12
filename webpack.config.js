@@ -3,6 +3,9 @@ const path = require("path");
 module.exports = {
   mode: 'production',
   entry: "./src/index.ts",
+  optimization: {
+    minimize: false
+  },
   module: {
     rules: [
       {
@@ -10,6 +13,10 @@ module.exports = {
         use: "ts-loader",
         exclude: /node_modules/,
       },
+      {
+        test: /\.worker\.js$/,
+        use: { loader: 'worker-loader' }
+      }
     ],
   },
   resolve: {
