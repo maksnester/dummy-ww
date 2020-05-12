@@ -1,10 +1,10 @@
 const path = require("path");
 
 module.exports = {
-  mode: 'production',
+  mode: "production",
   entry: "./src/index.ts",
   optimization: {
-    minimize: false
+    minimize: false,
   },
   module: {
     rules: [
@@ -15,15 +15,15 @@ module.exports = {
       },
       {
         test: /\.worker\.js$/,
-        use: { loader: 'worker-loader' }
-      }
+        use: { loader: "worker-loader", options: { inline: true, fallback: false } },
+      },
     ],
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
   output: {
-    libraryTarget: 'umd',
+    libraryTarget: "umd",
     filename: "index.js",
     path: path.resolve(__dirname, "lib"),
   },

@@ -1,5 +1,5 @@
 // @ts-ignore
-import Worker from 'worker-loader!./worker.js'
+import Worker from './dummy.worker.js'
 
 export const Greeter = (name: string) => `Hello ${name}`;
 
