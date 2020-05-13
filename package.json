@@ -8,7 +8,8 @@
     "lib/**/*"
   ],
   "scripts": {
-    "build": "wasm-pack build --out-dir ./src/pkg && webpack",
+    "build": "npm run build:wasm && webpack",
+    "build:wasm": "wasm-pack build --out-dir ./src/pkg",
     "version": "git add -A src",
     "postversion": "git push && git push --tags",
     "prepare": "npm run build",

@@ -9,13 +9,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.worker\.[jt]s$/,
+        use: {
+          loader: "worker-loader",
+          options: { inline: true, fallback: false },
+        },
+      },
+      {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
-      },
-      {
-        test: /\.worker\.js$/,
-        use: { loader: "worker-loader", options: { inline: true, fallback: false } },
       },
     ],
   },

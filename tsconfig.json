@@ -6,6 +6,7 @@
     "noImplicitAny": true,
     "outDir": "./lib",
     "allowJs": true,
+    "lib": ["webworker", "ES2015"],
     "strict": true
   },
   "include": ["src"],
