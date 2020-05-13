@@ -2,6 +2,7 @@
 import Worker from './dummy.worker'
 
 export const Greeter = (name: string) => `Hello ${name}`;
+import('./pkg').then((module) => console.log('WASM!!!!', module))
 
 export function logWorker() {
   const myWorker = new Worker()
