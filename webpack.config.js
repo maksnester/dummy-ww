@@ -20,6 +20,23 @@ module.exports = {
         use: "ts-loader",
         exclude: /node_modules/,
       },
+      {
+        test: /\.rs$/,
+        use: [
+          {
+            loader: "webassembly-loader",
+            options: {
+              export: "async-instance"
+            }
+          },
+          {
+            loader: "rust-native-wasm-loader",
+            options: {
+              release: true
+            }
+          }
+        ]
+      }
     ],
   },
   resolve: {
@@ -27,6 +44,7 @@ module.exports = {
   },
   output: {
     libraryTarget: "umd",
+    globalObject: "this",
     filename: "index.js",
     path: path.resolve(__dirname, "lib"),
   },

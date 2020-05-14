@@ -8,8 +8,7 @@
     "lib/**/*"
   ],
   "scripts": {
-    "build": "npm run build:wasm && webpack",
-    "build:wasm": "wasm-pack build --out-dir ./src/pkg",
+    "build": "webpack",
     "version": "git add -A src",
     "postversion": "git push && git push --tags",
     "prepare": "npm run build",
@@ -22,9 +21,9 @@
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
+    "rust-native-wasm-loader": "^0.8.1",
+    "ts-loader": "^7.0.4",
+    "webassembly-loader": "^1.1.0",
     "worker-loader": "^2.0.0"
-  },
-  "dependencies": {
-    "ts-loader": "^7.0.4"
   }
 }
