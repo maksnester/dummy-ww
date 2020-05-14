@@ -1,6 +1,6 @@
 {
   "name": "dummy-worker",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Nothing to see here",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -16,6 +16,7 @@
   },
   "keywords": [],
   "author": "maksim.nesterenko",
+  "repository": "https://github.com/maksnester/dummy-ww",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^3.8.3",
